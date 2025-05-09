@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+     <record id="view_fitness_session_form" model="ir.ui.view">
+        <field name="name">fitness.session.form</field>
+        <field name="model">fitness.session</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="session_name"/>
+                        <field name="session_date"/>
+                        <field name="heart_rate"/>
+                        <field name="calories"/>
+                        <field name="duration"/>
+                        <field name="gender"/>
+                        <field name="date_of_birth"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+     </record>
+
+    <record id="view_fitness_session_tree" model="ir.ui.view">
+        <field name="name">fitness.session.tree</field>
+        <field name="model">fitness.session</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="session_name"/>
+                <field name="session_date"/>
+                <field name="heart_rate"/>
+                <field name="calories"/>
+                <field name="duration"/>
+                <field name="gender"/>
+                <field name="date_of_birth"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_fitness_sessions" model="ir.actions.act_window">
+        <field name="name">Fitness Sessions</field>
+        <field name="res_model">fitness.session</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_fitness_root" name="Fitness"/>
+    <menuitem id="menu_fitness_sessions" name="Sessions" parent="menu_fitness_root" action="action_fitness_sessions"/>
+
+</odoo>
