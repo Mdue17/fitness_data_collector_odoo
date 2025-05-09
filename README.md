@@ -1,4 +1,4 @@
-# 🏋️ Odoo Fitness Data Collection App
+# 🏋️ Odoo Fitness Data Collection App(in build progress..)
 
 This project is a custom fitness tracking module built for Odoo 17. It allows users to log workout sessions manually or via API, In the near future it will support for integration with wearable devices like Polar.
 
